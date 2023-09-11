@@ -5,8 +5,8 @@ import mysql.connector
 # Database configuration
 db_config = {
     "host": "localhost",
-    "user": "root",
-    "password": "admin",
+    "user": "*****",
+    "password": "******",
     "database": "airportdb",
     "allow_local_infile": True,
 }
@@ -24,7 +24,7 @@ def extract_table_name(filename):
     table_name = re.sub(r'\d', '', table_name)  # Remove numbers
     return table_name
 
-# Iterate through CSV files in the directory
+# Iterate through TSV files in the directory
 for root, _, files in os.walk(tsv_directory):
     for file in files:
         if file.endswith(".tsv"):
